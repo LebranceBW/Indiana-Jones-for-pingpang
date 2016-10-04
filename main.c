@@ -4,13 +4,13 @@
 #include "Arm.h"
 void main(void)
 {
-  WDT_Init();                         //看门狗设置
+   WDT_Init();                         //看门狗设置
   Clock_Init();                       //系统时钟设置
+  Arm_Init();
   UART_Init();                        //串口设置初始化
   IE1=IE1|URXIE0;            //找到问题了 IE1赋不动值,这个IE1只能在主函数里面改变！！！！！！！！！！
   _EINT();//开中断
   Motor_Init();
-  Arm_Init();
   while(1)
   {
 		  switch(buffer[2])

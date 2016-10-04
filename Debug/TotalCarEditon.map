@@ -1,10 +1,10 @@
 ******************************************************************************
                   MSP430 Linker PC v15.12.3                    
 ******************************************************************************
->> Linked Mon Oct 03 10:17:37 2016
+>> Linked Tue Oct 04 18:05:39 2016
 
 OUTPUT FILE NAME:   <TotalCarEditon.out>
-ENTRY POINT SYMBOL: "_c_int00_noargs_noexit"  address: 00001368
+ENTRY POINT SYMBOL: "_c_int00_noargs_noexit"  address: 000013da
 
 
 MEMORY CONFIGURATION
@@ -17,7 +17,7 @@ MEMORY CONFIGURATION
   RAM                   00000200   00000800  00000054  000007ac  RWIX
   INFOB                 00001000   00000080  00000000  00000080  RWIX
   INFOA                 00001080   00000080  00000000  00000080  RWIX
-  FLASH                 00001100   0000eee0  00000334  0000ebac  RWIX
+  FLASH                 00001100   0000eee0  000003a6  0000eb3a  RWIX
   INT00                 0000ffe0   00000002  00000000  00000002  RWIX
   INT01                 0000ffe2   00000002  00000002  00000000  RWIX
   INT02                 0000ffe4   00000002  00000002  00000000  RWIX
@@ -48,38 +48,38 @@ section   page    origin      length       input sections
                   000009b0    00000002     rts430_eabi.lib : boot.obj (.stack)
                   000009b2    0000004e     --HOLE--
 
-.text      0    00001100    0000032a     
-                  00001100    00000090     main.obj (.text:Arm_Catch)
-                  00001190    0000006e     rts430_eabi.lib : autoinit.obj (.text:_auto_init)
-                  000011fe    0000006c     main.obj (.text:main)
-                  0000126a    0000005a     rts430_eabi.lib : cpy_tbl.obj (.text:copy_in)
-                  000012c4    0000003e     main.obj (.text:Arm_Init)
-                  00001302    00000038     main.obj (.text:UART_Init)
-                  0000133a    0000002e     main.obj (.text:Clock_Init)
-                  00001368    0000001a     rts430_eabi.lib : boot_special.obj (.text:_c_int00_noargs_noexit)
-                  00001382    00000014                     : copy_zero_init.obj (.text:decompress:ZI:__TI_zero_init)
-                  00001396    00000014                     : mult16_hw.obj (.text)
-                  000013aa    00000012                     : memcpy.obj (.text:memcpy)
-                  000013bc    00000010                     : epilog.obj (.text)
-                  000013cc    0000000a     main.obj (.text:Motor_Init)
-                  000013d6    00000008     main.obj (.text:Arm_release)
-                  000013de    00000008     main.obj (.text:Motor_Ahead)
-                  000013e6    00000008     main.obj (.text:Motor_Back)
-                  000013ee    00000008     main.obj (.text:Motor_Left)
-                  000013f6    00000008     main.obj (.text:Motor_Right)
-                  000013fe    00000008     main.obj (.text:UART0_RX_ISR)
-                  00001406    00000008     main.obj (.text:WDT_Init)
-                  0000140e    00000008     rts430_eabi.lib : isr_trap.obj (.text:_isr:__TI_ISR_TRAP)
-                  00001416    00000006     main.obj (.text:Motor_Stop)
-                  0000141c    00000006     rts430_eabi.lib : exit.obj (.text:abort)
-                  00001422    00000004                     : pre_init.obj (.text:_system_pre_init)
-                  00001426    00000002     main.obj (.text:UART0_TX_ISR)
-                  00001428    00000002     rts430_eabi.lib : startup.obj (.text:_system_post_cinit)
+.text      0    00001100    0000039c     
+                  00001100    000000d4     main.obj (.text:Arm_Catch)
+                  000011d4    0000006e     rts430_eabi.lib : autoinit.obj (.text:_auto_init)
+                  00001242    0000006c     main.obj (.text:Arm_Init)
+                  000012ae    0000006c     main.obj (.text:main)
+                  0000131a    0000005a     rts430_eabi.lib : cpy_tbl.obj (.text:copy_in)
+                  00001374    00000038     main.obj (.text:UART_Init)
+                  000013ac    0000002e     main.obj (.text:Clock_Init)
+                  000013da    0000001a     rts430_eabi.lib : boot_special.obj (.text:_c_int00_noargs_noexit)
+                  000013f4    00000014                     : copy_zero_init.obj (.text:decompress:ZI:__TI_zero_init)
+                  00001408    00000014                     : mult16_hw.obj (.text)
+                  0000141c    00000012                     : memcpy.obj (.text:memcpy)
+                  0000142e    00000010                     : epilog.obj (.text)
+                  0000143e    0000000a     main.obj (.text:Motor_Init)
+                  00001448    00000008     main.obj (.text:Arm_release)
+                  00001450    00000008     main.obj (.text:Motor_Ahead)
+                  00001458    00000008     main.obj (.text:Motor_Back)
+                  00001460    00000008     main.obj (.text:Motor_Left)
+                  00001468    00000008     main.obj (.text:Motor_Right)
+                  00001470    00000008     main.obj (.text:UART0_RX_ISR)
+                  00001478    00000008     main.obj (.text:WDT_Init)
+                  00001480    00000008     rts430_eabi.lib : isr_trap.obj (.text:_isr:__TI_ISR_TRAP)
+                  00001488    00000006     main.obj (.text:Motor_Stop)
+                  0000148e    00000006     rts430_eabi.lib : exit.obj (.text:abort)
+                  00001494    00000004                     : pre_init.obj (.text:_system_pre_init)
+                  00001498    00000002     main.obj (.text:UART0_TX_ISR)
+                  0000149a    00000002     rts430_eabi.lib : startup.obj (.text:_system_post_cinit)
 
-.cinit     0    0000142a    0000000a     
-                  0000142a    00000004     (.cinit..bss.load) [load image, compression = zero_init]
-                  0000142e    00000002     (__TI_handler_table)
-                  00001430    00000004     (__TI_cinit_table)
+.cinit     0    0000149c    0000000a     
+                  0000149c    00000004     (.cinit..bss.load) [load image, compression = zero_init]
+                  000014a0    00000002     (__TI_handler_table)
+                  000014a2    00000004     (__TI_cinit_table)
 
 .binit     0    00001100    00000000     
 
@@ -137,9 +137,9 @@ MODULE SUMMARY
        Module               code   ro data   rw data
        ------               ----   -------   -------
     .\
-       main.obj             490    4         4      
+       main.obj             604    4         4      
     +--+--------------------+------+---------+---------+
-       Total:               490    4         4      
+       Total:               604    4         4      
                                                     
     D:\ti\ccsv6\tools\compiler\msp430_15.12.3.LTS\lib\rts430_eabi.lib
        autoinit.obj         110    0         0      
@@ -172,18 +172,18 @@ MODULE SUMMARY
        Stack:               0      0         80     
        Linker Generated:    0      10        0      
     +--+--------------------+------+---------+---------+
-       Grand Total:         810    40        84     
+       Grand Total:         924    40        84     
 
 
 LINKER GENERATED COPY TABLES
 
-__TI_cinit_table @ 00001430 records: 1, size/record: 4, table size: 4
-	.bss: load addr=0000142a, load size=00000004 bytes, run addr=00000200, run size=00000004 bytes, compression=zero_init
+__TI_cinit_table @ 000014a2 records: 1, size/record: 4, table size: 4
+	.bss: load addr=0000149c, load size=00000004 bytes, run addr=00000200, run size=00000004 bytes, compression=zero_init
 
 
 LINKER GENERATED HANDLER TABLE
 
-__TI_handler_table @ 0000142e records: 1, size/record: 2, table size: 2
+__TI_handler_table @ 000014a0 records: 1, size/record: 2, table size: 2
 	index: 0, handler: __TI_zero_init
 
 
@@ -229,15 +229,15 @@ address   name
 00000150  ADC12MEM8               
 00000152  ADC12MEM9               
 00001100  Arm_Catch               
-000012c4  Arm_Init                
-000013d6  Arm_release             
+00001242  Arm_Init                
+00001448  Arm_release             
 00000057  BCSCTL1                 
 00000058  BCSCTL2                 
-0000141c  C$$EXIT                 
+0000148e  C$$EXIT                 
 00000059  CACTL1                  
 0000005a  CACTL2                  
 0000005b  CAPD                    
-0000133a  Clock_Init              
+000013ac  Clock_Init              
 00000056  DCOCTL                  
 00000128  FCTL1                   
 0000012a  FCTL2                   
@@ -252,12 +252,12 @@ address   name
 00000005  ME2                     
 00000130  MPY                     
 00000132  MPYS                    
-000013de  Motor_Ahead             
-000013e6  Motor_Back              
-000013cc  Motor_Init              
-000013ee  Motor_Left              
-000013f6  Motor_Right             
-00001416  Motor_Stop              
+00001450  Motor_Ahead             
+00001458  Motor_Back              
+0000143e  Motor_Init              
+00001460  Motor_Left              
+00001468  Motor_Right             
+00001488  Motor_Stop              
 00000138  OP2                     
 00000022  P1DIR                   
 00000025  P1IE                    
@@ -334,22 +334,22 @@ address   name
 0000007e  U1RXBUF                 
 00000079  U1TCTL                  
 0000007f  U1TXBUF                 
-000013fe  UART0_RX_ISR            
-00001426  UART0_TX_ISR            
-00001302  UART_Init               
+00001470  UART0_RX_ISR            
+00001498  UART0_TX_ISR            
+00001374  UART_Init               
 00000120  WDTCTL                  
-00001406  WDT_Init                
+00001478  WDT_Init                
 00000a00  __STACK_END             
 00000050  __STACK_SIZE            
 UNDEFED   __TI_BINIT_Base         
 UNDEFED   __TI_BINIT_Limit        
-00001430  __TI_CINIT_Base         
-00001434  __TI_CINIT_Limit        
-0000142e  __TI_Handler_Table_Base 
-00001430  __TI_Handler_Table_Limit
+000014a2  __TI_CINIT_Base         
+000014a6  __TI_CINIT_Limit        
+000014a0  __TI_Handler_Table_Base 
+000014a2  __TI_Handler_Table_Limit
 UNDEFED   __TI_INITARRAY_Base     
 UNDEFED   __TI_INITARRAY_Limit    
-0000140e  __TI_ISR_TRAP           
+00001480  __TI_ISR_TRAP           
 0000ffe2  __TI_int01              
 0000ffe4  __TI_int02              
 0000ffe6  __TI_int03              
@@ -367,27 +367,27 @@ UNDEFED   __TI_INITARRAY_Limit
 ffffffff  __TI_pprof_out_hndl     
 ffffffff  __TI_prof_data_size     
 ffffffff  __TI_prof_data_start    
-00001382  __TI_zero_init          
+000013f4  __TI_zero_init          
 ffffffff  __c_args__              
-000013c8  __mspabi_func_epilog_1  
-000013c6  __mspabi_func_epilog_2  
-000013c4  __mspabi_func_epilog_3  
-000013c2  __mspabi_func_epilog_4  
-000013c0  __mspabi_func_epilog_5  
-000013be  __mspabi_func_epilog_6  
-000013bc  __mspabi_func_epilog_7  
-00001396  __mspabi_mpyi_hw        
-00001190  _auto_init              
-00001368  _c_int00_noargs_noexit  
+0000143a  __mspabi_func_epilog_1  
+00001438  __mspabi_func_epilog_2  
+00001436  __mspabi_func_epilog_3  
+00001434  __mspabi_func_epilog_4  
+00001432  __mspabi_func_epilog_5  
+00001430  __mspabi_func_epilog_6  
+0000142e  __mspabi_func_epilog_7  
+00001408  __mspabi_mpyi_hw        
+000011d4  _auto_init              
+000013da  _c_int00_noargs_noexit  
 0000fffe  _reset_vector           
 000009b0  _stack                  
-00001428  _system_post_cinit      
-00001422  _system_pre_init        
-0000141c  abort                   
+0000149a  _system_post_cinit      
+00001494  _system_pre_init        
+0000148e  abort                   
 00000200  buffer                  
-0000126a  copy_in                 
-000011fe  main                    
-000013aa  memcpy                  
+0000131a  copy_in                 
+000012ae  main                    
+0000141c  memcpy                  
 
 
 GLOBAL SYMBOLS: SORTED BY Symbol Address 
@@ -532,42 +532,42 @@ address   name
 000009b0  _stack                  
 00000a00  __STACK_END             
 00001100  Arm_Catch               
-00001190  _auto_init              
-000011fe  main                    
-0000126a  copy_in                 
-000012c4  Arm_Init                
-00001302  UART_Init               
-0000133a  Clock_Init              
-00001368  _c_int00_noargs_noexit  
-00001382  __TI_zero_init          
-00001396  __mspabi_mpyi_hw        
-000013aa  memcpy                  
-000013bc  __mspabi_func_epilog_7  
-000013be  __mspabi_func_epilog_6  
-000013c0  __mspabi_func_epilog_5  
-000013c2  __mspabi_func_epilog_4  
-000013c4  __mspabi_func_epilog_3  
-000013c6  __mspabi_func_epilog_2  
-000013c8  __mspabi_func_epilog_1  
-000013cc  Motor_Init              
-000013d6  Arm_release             
-000013de  Motor_Ahead             
-000013e6  Motor_Back              
-000013ee  Motor_Left              
-000013f6  Motor_Right             
-000013fe  UART0_RX_ISR            
-00001406  WDT_Init                
-0000140e  __TI_ISR_TRAP           
-00001416  Motor_Stop              
-0000141c  C$$EXIT                 
-0000141c  abort                   
-00001422  _system_pre_init        
-00001426  UART0_TX_ISR            
-00001428  _system_post_cinit      
-0000142e  __TI_Handler_Table_Base 
-00001430  __TI_CINIT_Base         
-00001430  __TI_Handler_Table_Limit
-00001434  __TI_CINIT_Limit        
+000011d4  _auto_init              
+00001242  Arm_Init                
+000012ae  main                    
+0000131a  copy_in                 
+00001374  UART_Init               
+000013ac  Clock_Init              
+000013da  _c_int00_noargs_noexit  
+000013f4  __TI_zero_init          
+00001408  __mspabi_mpyi_hw        
+0000141c  memcpy                  
+0000142e  __mspabi_func_epilog_7  
+00001430  __mspabi_func_epilog_6  
+00001432  __mspabi_func_epilog_5  
+00001434  __mspabi_func_epilog_4  
+00001436  __mspabi_func_epilog_3  
+00001438  __mspabi_func_epilog_2  
+0000143a  __mspabi_func_epilog_1  
+0000143e  Motor_Init              
+00001448  Arm_release             
+00001450  Motor_Ahead             
+00001458  Motor_Back              
+00001460  Motor_Left              
+00001468  Motor_Right             
+00001470  UART0_RX_ISR            
+00001478  WDT_Init                
+00001480  __TI_ISR_TRAP           
+00001488  Motor_Stop              
+0000148e  C$$EXIT                 
+0000148e  abort                   
+00001494  _system_pre_init        
+00001498  UART0_TX_ISR            
+0000149a  _system_post_cinit      
+000014a0  __TI_Handler_Table_Base 
+000014a2  __TI_CINIT_Base         
+000014a2  __TI_Handler_Table_Limit
+000014a6  __TI_CINIT_Limit        
 0000ffe2  __TI_int01              
 0000ffe4  __TI_int02              
 0000ffe6  __TI_int03              
